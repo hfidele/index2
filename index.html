@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Bootcamp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(web-design-development-blog-2.jpg);
+        }
+        header {
+            background-color: rgb(27, 3, 78);
+            background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: rgb(16, 2, 46);
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: rgb(27, 3, 78);
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        button{
+            margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600 bold;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(to right, rgb(2, 14, 2),rgb(27, 3, 78) );
+        }
+    h2{
+        font-size: x-large;
+        font-weight: 900;
+        color: blue;
+    }
+    </style>
+    
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Web Development Bootcamp</h1>
+</header>
+
+<nav>
+    <a  id="project" href="">Projects</a>
+    <a  id="document">Documents</a>
+    <a  id="comment">Comments</a>
+    <a href="https://www.tiktok.com/@mrwillycreativity250">Videos</a>
+    <a href="https://hfidele.github.io/about/about.html" id="about">About</a>
+</nav>
+
+<section id="content">
+    <section id="lessons">
+        <h2>Lessons</h2>
+        <button id="previous-lessons">Previous Lessons</button>
+        <button id="todays-lesson">Today's Lesson</button>
+        <button id="exercises">Exercises</button>
+      </section>
+</section>
+
+<footer>
+    <p>&copy; 2024 Contacts:+250787970496. All rights reserved.</p>
+</footer>
+
+<script>
+    document.getElementById('project').addEventListener('click', function() {
+        document.getElementById('content').innerHTML = `
+            <h1>Welcome to project section</h1>
+            <p>No new project</p>
+         <a href="projectideas.html"><button type="submit">Click here to create a new project</button></a>
+        `;
+    });
+
+    document.getElementById('document').addEventListener('click', function() {
+        document.getElementById('content').innerHTML = `
+        <h2>Welcome to document section</h2>
+        <h1>Download Document</h1>
+    <p>Click the link below to download the document:</p>
+    <a href="INTRODUCTION TO SOFTWARE DEVELOPMENT.docx" download>Lesson one</a>
+        `;
+    });
+
+    document.getElementById('comment').addEventListener('click', function() {
+        document.getElementById('content').innerHTML = `
+        <h2>Welcome to comment section</h2>
+            <p>How was the lessons?</p>
+            
+        `;
+    });
+    document.getElementById('about').addEventListener('click', function() {
+        document.getElementById('content').innerHTML = ``
+    });
+</script>
+
+</body>
+</html>
